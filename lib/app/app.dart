@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marcador_truco/app/pages/marcador/marcador_page.dart';
+import 'package:marcador_truco/app/pages/marcador_page.dart';
 
 class MarcadorTrucoApp extends StatelessWidget {
   const MarcadorTrucoApp({Key? key}) : super(key: key);

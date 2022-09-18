@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marcador_truco/app/pages/components/layout_component.dart';
-import 'package:marcador_truco/app/pages/marcador/marcador_page.dart';
+import 'package:marcador_truco/app/pages/marcador_page.dart';
+import 'package:marcador_truco/app/rotinas/pontuacao_rotina.dart';
 
 class ResultadoPage extends StatelessWidget {
   const ResultadoPage({Key? key, required this.vencedores}) : super(key: key);
@@ -8,14 +8,19 @@ class ResultadoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutComponent(
-      title: "Resultado",
-      child: Column(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Resultado"),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+      ),
+      body: Column(
         children: [
-          Text("Vencedores"),
+          const Text("Vencedores"),
           Text(vencedores),
           TextButton(
             onPressed: () {
+              PontuacaoRotina().reiniciarPontuacao();
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return const MarcadorPage();
               }));
