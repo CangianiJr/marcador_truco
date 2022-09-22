@@ -16,7 +16,7 @@ class ResultadoPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Text("Vencedores"),
+          const Text("gay"),
           Text(vencedores),
           TextButton(
             onPressed: () {
