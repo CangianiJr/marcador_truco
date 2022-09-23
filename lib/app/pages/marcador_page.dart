@@ -114,6 +114,31 @@ class _MarcadorPageState extends State<MarcadorPage> {
       appBar: AppBar(
         title: const Text("Marcador de truco"),
         centerTitle: true,
+        leadingWidth: 85,
+        leading: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            SizedBox(width: 5),
+            Icon(
+              MarcadorTrucoIcons.clovers,
+              size: 20,
+            ),
+            Icon(
+              MarcadorTrucoIcons.hearts,
+              size: 20,
+              color: Colors.red,
+            ),
+            Icon(
+              MarcadorTrucoIcons.spades,
+              size: 20,
+            ),
+            Icon(
+              MarcadorTrucoIcons.diamonds,
+              color: Colors.red,
+              size: 20,
+            ),
+          ],
+        ),
         actions: [
           IconButton(
             onPressed: () {
@@ -163,27 +188,30 @@ class _MarcadorPageState extends State<MarcadorPage> {
                           color: Colors.black,
                         ),
                       ),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.red,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
+                      SizedBox(
+                        height: 35,
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                            backgroundColor: Colors.red,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
                           ),
-                        ),
-                        onPressed: () {
-                          _aumentarPontuacao(TimesConstants.nos, 1);
-                        },
-                        child: const Icon(
-                          MarcadorTrucoIcons.plus,
-                          color: Colors.white,
+                          onPressed: () {
+                            _aumentarPontuacao(TimesConstants.nos, 1);
+                          },
+                          child: const Icon(
+                            MarcadorTrucoIcons.plus,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ],
                   ),
                   const SizedBox(height: 30),
                   SizedBox(
-                    width: 100,
-                    height: 30,
+                    width: 120,
+                    height: 35,
                     child: TextButton(
                       style: TextButton.styleFrom(
                         backgroundColor: Colors.black,
@@ -243,27 +271,30 @@ class _MarcadorPageState extends State<MarcadorPage> {
                           color: Colors.black,
                         ),
                       ),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.red,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
+                      SizedBox(
+                        height: 35,
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                            backgroundColor: Colors.red,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
                           ),
-                        ),
-                        onPressed: () {
-                          _aumentarPontuacao(TimesConstants.eles, 1);
-                        },
-                        child: const Icon(
-                          MarcadorTrucoIcons.plus,
-                          color: Colors.white,
+                          onPressed: () {
+                            _aumentarPontuacao(TimesConstants.eles, 1);
+                          },
+                          child: const Icon(
+                            MarcadorTrucoIcons.plus,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ],
                   ),
                   const SizedBox(height: 30),
                   SizedBox(
-                    height: 30,
-                    width: 100,
+                    height: 35,
+                    width: 120,
                     child: TextButton(
                       style: TextButton.styleFrom(
                         backgroundColor: Colors.black,
@@ -276,6 +307,7 @@ class _MarcadorPageState extends State<MarcadorPage> {
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: const [
                           Icon(
                             MarcadorTrucoIcons.plus,
