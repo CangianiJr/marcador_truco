@@ -151,10 +151,11 @@ class _MarcadorPageState extends State<MarcadorPage> {
       ),
       body: Container(
         decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.white, Colors.grey])),
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.white, Colors.grey]),
+        ),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(12, 25, 12, 12),
           child: Row(
