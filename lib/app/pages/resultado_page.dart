@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:marcador_truco/app/pages/marcador_page.dart';
-import 'package:marcador_truco/app/rotinas/pontuacao_rotina.dart';
 
 class ResultadoPage extends StatelessWidget {
   const ResultadoPage({Key? key, required this.vencedores}) : super(key: key);
